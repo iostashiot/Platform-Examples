@@ -11,8 +11,8 @@ device_id    = '<YOUR DEVICE ID HERE>'
 client_id = 'Raspberry PI'
 
 # Define board constants
-buttonPin = 7
-ledPin = 12
+buttonPin = 15
+ledPin = 8
 
 # Setup board
 GPIO.setmode(GPIO.BOARD)
