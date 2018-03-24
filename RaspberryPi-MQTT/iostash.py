@@ -14,6 +14,10 @@ client_id = 'Raspberry PI'
 buttonPin = 15
 ledPin = 8
 
+# Setup topics
+listen_topic  = '/' + accessToken + '/' + device_id + '/custom' # Listen to custom events
+publish_topic = '/' + accessToken + '/' + device_id + '/'  # Publish state back
+
 # Setup board
 GPIO.setmode(GPIO.BOARD)
 GPIO.cleanup() 
@@ -44,7 +48,7 @@ def on_message(client, obj, msg):
 
     # Publish back the state to IOStash
     payload = { 'state': value }
-    client.publish(out_topic, json.dumps(payload))
+    client.publish(publish_topic, json.dumps(payload))
 
 # Setup MQTT client
 client = paho.Client(client_id=client_id, protocol=paho.MQTTv31)
@@ -53,11 +57,6 @@ client = paho.Client(client_id=client_id, protocol=paho.MQTTv31)
 client.on_message = on_message
 client.on_connect = on_connect
 client.on_subscribe = on_subscribe
-
-
-# Setup topics
-listen_topic  = '/' + accessToken + '/' + device_id + '/custom' # Listen to custom events
-publish_topic = '/' + accessToken + '/' + device_id + '/'  # Publish state back
 
 # Initiate MQTT connection
 client.username_pw_set(accessToken, '123')  
