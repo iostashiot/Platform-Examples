@@ -7,4 +7,4 @@
 ----------
 
 
-For more information on the tutorials,  Please visit https://www.hackster.io/iostash
+This is the official project repo for the project hosted at: https://www.hackster.io/vsaravind007/esp8266-simple-weather-station-f0824b
