@@ -13,8 +13,8 @@ This example demonstrates the use of IOStash MQTT interface with Raspberry Pi by
  
  **How To Run**
 
-Setup the example according to the tutorial on http://iostash.com.
+Setup the example according to the tutorial on https://www.hackster.io/vsaravind007/smart-bulb-using-iostash-with-raspberry-pi-e4ba43
 
 **Notes**
 
-For support or assistance, drop an email to support@iostash.com
+For support or assistance, drop an email to support@iostash.io
