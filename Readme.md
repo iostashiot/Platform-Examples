@@ -7,4 +7,4 @@
 ----------
 
 
-Official repo of IOStash Platform examples. For more information,  Please visit http://iostash.com
+Official repo of IOStash Platform examples. For more information,  Please visit https://iostash.io
