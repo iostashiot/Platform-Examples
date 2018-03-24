@@ -39,6 +39,7 @@ def on_message(client, obj, msg):
     # Print the data received
     print(json_data)
     value = json.loads(json_data)['publishData']['msg']
+    value = int(value) 
     if value == 1:
         led_status = GPIO.HIGH
         GPIO.output(ledPin, GPIO.HIGH)
